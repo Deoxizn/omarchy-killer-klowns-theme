@@ -24,7 +24,7 @@ Killer Klowns from Outer Space theme - A dark, circus-horror aesthetic with neon
 &nbsp;  
 To install this theme, simply use the omarchy-theme-install command:  
 &nbsp;  
-```omarchy-theme-install https://github.com/YOUR_USERNAME/omarchy-killer-klowns-theme.git```  
+```omarchy-theme-install https://github.com/Deoxizn/omarchy-killer-klowns-theme.git```  
 &nbsp;    
 &nbsp;  
 &nbsp;    
