@@ -1,0 +1,357 @@
+/**
+ * @name Killer Klowns Vesktop
+ * @description Dark circus-horror Discord theme for Killer Klowns from Outer Space
+ * @version 1.0.0
+ * @author Killer Klowns Theme
+ */
+
+@import url("https://fonts.googleapis.com/css2?family=Creepster&family=Nosifer&family=Roboto:wght@400;500;700&display=swap");
+
+:root {
+  /* Killer Klowns Circus Horror Colors */
+  --klowns-bg: #120515;
+  --klowns-fg: #e0e0e0;
+  --klowns-accent: #39ff14;
+  --klowns-accent-light: #76ff7a;
+  --klowns-secondary: #1a0a1f;
+  --klowns-dark: #4b0082;
+  --klowns-pink: #ff1493;
+  --klowns-purple: #bf00ff;
+  --klowns-yellow: #ffff00;
+  --klowns-cyan: #00ffff;
+  --klowns-red: #dc143c;
+
+  /* Semantic color mapping */
+  --kk-bg-primary: var(--klowns-bg);
+  --kk-bg-secondary: var(--klowns-secondary);
+  --kk-bg-tertiary: var(--klowns-dark);
+  --kk-bg-hover: rgba(57, 255, 20, 0.15);
+  --kk-bg-active: rgba(57, 255, 20, 0.25);
+  --kk-bg-selected: rgba(57, 255, 20, 0.35);
+  --kk-bg-mention: linear-gradient(90deg, rgba(255, 20, 147, 0.25) 0%, rgba(18, 5, 21, 0.1) 100%);
+
+  --kk-text-primary: var(--klowns-fg);
+  --kk-text-secondary: rgba(224, 224, 224, 0.75);
+  --kk-text-muted: rgba(224, 224, 224, 0.55);
+  --kk-text-inverse: var(--klowns-bg);
+
+  --kk-accent: var(--klowns-accent);
+  --kk-accent-hover: #50ff35;
+  --kk-accent-soft: rgba(57, 255, 20, 0.6);
+
+  --kk-border: rgba(224, 224, 224, 0.2);
+  --kk-border-subtle: rgba(224, 224, 224, 0.1);
+  --kk-shadow: rgba(0, 0, 0, 0.4);
+
+  /* Font */
+  --font-primary: "Roboto", "gg sans", sans-serif;
+  --font-display: "Nosifer", "gg sans", sans-serif;
+}
+
+/* Dark theme base */
+.theme-dark,
+.theme-light {
+  /* Backgrounds */
+  --background-primary: var(--kk-bg-primary) !important;
+  --background-secondary: var(--kk-bg-secondary) !important;
+  --background-secondary-alt: var(--kk-bg-secondary) !important;
+  --background-tertiary: var(--kk-bg-secondary) !important;
+  --background-accent: var(--kk-bg-tertiary) !important;
+  --background-floating: var(--klowns-dark) !important;
+  
+  --background-base-lowest: var(--kk-bg-primary) !important;
+  --background-base-lower: var(--kk-bg-primary) !important;
+  --background-base-low: var(--kk-bg-secondary) !important;
+  --background-base-tertiary: var(--kk-bg-secondary) !important;
+  
+  --background-surface-high: var(--kk-bg-secondary) !important;
+  --background-surface-higher: var(--kk-bg-tertiary) !important;
+  --background-surface-highest: var(--klowns-dark) !important;
+  --bg-surface-raised: var(--kk-bg-secondary) !important;
+  --bg-surface-overlay: var(--klowns-dark) !important;
+  --bg-base-secondary: var(--kk-bg-secondary) !important;
+  --bg-base-tertiary: var(--kk-bg-secondary) !important;
+  --bg-overlay-2: var(--kk-bg-secondary) !important;
+  --bg-overlay-3: var(--kk-bg-tertiary) !important;
+
+  /* Modifiers */
+  --background-modifier-accent: var(--kk-bg-hover) !important;
+  --background-modifier-hover: var(--kk-bg-hover) !important;
+  --background-modifier-active: var(--kk-bg-active) !important;
+  --background-modifier-selected: var(--kk-bg-selected) !important;
+  --background-mentioned: var(--kk-bg-mention) !important;
+  --background-mentioned-hover: linear-gradient(90deg, rgba(255, 20, 147, 0.35) 0%, rgba(18, 5, 21, 0.15) 100%) !important;
+  --mention-background: rgba(255, 20, 147, 0.25) !important;
+  --mention-foreground: var(--klowns-pink) !important;
+
+  /* Text */
+  --text-normal: var(--kk-text-primary) !important;
+  --text-muted: var(--kk-text-muted) !important;
+  --text-primary: var(--kk-text-primary) !important;
+  --text-secondary: var(--kk-text-secondary) !important;
+  --header-primary: var(--kk-text-primary) !important;
+  --header-secondary: var(--kk-text-secondary) !important;
+  --interactive-normal: var(--kk-text-primary) !important;
+  --interactive-hover: var(--klowns-accent) !important;
+  --interactive-active: var(--klowns-accent) !important;
+  --interactive-muted: var(--kk-text-muted) !important;
+
+  /* Channels */
+  --channels-default: var(--kk-text-secondary) !important;
+  --channels-default-muted: var(--kk-text-muted) !important;
+  --channel-icon: var(--klowns-accent) !important;
+
+  /* Accents */
+  --brand-500: var(--klowns-accent) !important;
+  --brand-560: var(--klowns-accent-hover) !important;
+  --brand-600: var(--klowns-accent) !important;
+  --brand-experiment: var(--klowns-accent) !important;
+  --brand-experiment-560: var(--klowns-accent-hover) !important;
+
+  /* Status indicators */
+  --status-positive: var(--klowns-accent) !important;
+  --status-warning: var(--klowns-yellow) !important;
+  --status-danger: var(--klowns-red) !important;
+  --status-danger-background: rgba(220, 20, 60, 0.2) !important;
+
+  /* Messages */
+  --message-background: var(--kk-bg-primary) !important;
+  --message-background-hover: var(--kk-bg-secondary) !important;
+
+  /* Borders */
+  --border-subtle: var(--kk-border-subtle) !important;
+  --border-normal: var(--kk-border) !important;
+
+  /* Scrollbar */
+  --scrollbar-auto-thumb: var(--klowns-dark) !important;
+  --scrollbar-auto-track: transparent !important;
+  --scrollbar-thin-thumb: var(--klowns-dark) !important;
+  --scrollbar-thin-track: transparent !important;
+}
+
+/* Guild sidebar */
+.guilds__2b93a {
+  background: var(--kk-bg-secondary) !important;
+}
+
+/* Chat area */
+.chat__52833 {
+  background: var(--kk-bg-primary) !important;
+}
+
+/* Member list */
+.members__9f47b {
+  background: var(--kk-bg-secondary) !important;
+}
+
+/* Channel sidebar */
+.sidebar_ded4b5 {
+  background: var(--kk-bg-secondary) !important;
+}
+
+/* Settings */
+.layer__2efaa {
+  background: var(--kk-bg-primary) !important;
+}
+
+/* User panel */
+.panels__58331 {
+  background: var(--kk-bg-secondary) !important;
+}
+
+/* Selected/hover effects */
+.modeSelected__487d6 .link__95dc0,
+.modeSelected__487d6:hover .link__95dc0 {
+  background: var(--kk-bg-selected) !important;
+}
+
+/* Buttons */
+.lookFilled__950dd.colorBrand__27d57 {
+  background: var(--klowns-accent) !important;
+  color: var(--klowns-bg) !important;
+}
+
+.lookFilled__950dd.colorBrand__27d57:hover {
+  background: var(--klowns-accent-hover) !important;
+}
+
+/* Mentions */
+.mentioned__58017 {
+  background: var(--kk-bg-mention) !important;
+  border-left: 2px solid var(--klowns-pink) !important;
+}
+
+/* Embeds and code blocks */
+.embedFull__8dc21 {
+  background: var(--kk-bg-secondary) !important;
+  border-left: 4px solid var(--klowns-accent) !important;
+}
+
+.codeBlockText__6172e,
+.codeBlockLang__378d3 {
+  background: var(--kk-bg-secondary) !important;
+}
+
+/* Input areas */
+.input__321f5,
+.scrollableContainer__33e06 {
+  background: var(--kk-bg-secondary) !important;
+  border: 1px solid var(--kk-border) !important;
+}
+
+/* Tooltips */
+.tooltip__7b090 {
+  background: var(--klowns-dark) !important;
+  border: 1px solid var(--klowns-accent) !important;
+}
+
+/* Modals */
+.root_a28985 {
+  background: var(--kk-bg-primary) !important;
+  border: 1px solid var(--kk-border) !important;
+}
+
+/* Popouts */
+.menu_dc52c6 {
+  background: var(--klowns-dark) !important;
+  border: 1px solid var(--kk-border) !important;
+}
+
+/* Search results */
+.searchResultsWrap__9f374 {
+  background: var(--kk-bg-secondary) !important;
+}
+
+/* Reactions */
+.reaction_b90ab0 {
+  background: var(--kk-bg-secondary) !important;
+  border: 1px solid var(--kk-border-subtle) !important;
+}
+
+.reaction_b90ab0.reactionMe_bf6909 {
+  background: rgba(57, 255, 20, 0.2) !important;
+  border-color: var(--klowns-accent) !important;
+}
+
+/* Typing indicator */
+.typing__6fd1d {
+  background: transparent !important;
+}
+
+/* New messages bar */
+.newMessagesBar__8b6d7 {
+  background: var(--klowns-accent) !important;
+  color: var(--klowns-bg) !important;
+}
+
+/* Unread indicator */
+.unread__48cf4 {
+  background: var(--klowns-pink) !important;
+}
+
+/* Voice connection */
+.container_d667ff {
+  background: var(--kk-bg-secondary) !important;
+}
+
+/* Game activity */
+.activityUserPopoutV2__32328 {
+  background: var(--kk-bg-secondary) !important;
+}
+
+/* Nitro/themes tab */
+.premiumTab__57bdc {
+  background: linear-gradient(90deg, var(--klowns-pink), var(--klowns-purple)) !important;
+}
+
+/* Boost progress bar */
+.progressBar__47525 {
+  background: linear-gradient(90deg, var(--klowns-accent), var(--klowns-cyan)) !important;
+}
+
+/* Custom glow effects */
+.theme-dark .wrapper__7bcde:hover .childWrapper__01b9c,
+.theme-dark .wrapper__7bcde.selected_f5ec8e .childWrapper__01b9c {
+  background: var(--klowns-accent) !important;
+  box-shadow: 0 0 20px rgba(57, 255, 20, 0.4) !important;
+}
+
+/* Links */
+.anchor_c8ddc0 {
+  color: var(--klowns-cyan) !important;
+}
+
+/* Bot tags */
+.botTagRegular_c89c6c {
+  background: var(--klowns-accent) !important;
+  color: var(--klowns-bg) !important;
+}
+
+/* Pins and inbox */
+.messagesPopoutWrap_b3b384 {
+  background: var(--kk-bg-primary) !important;
+  border: 1px solid var(--kk-border) !important;
+}
+
+/* Emoji picker */
+.emojiPicker_b65ce9 {
+  background: var(--kk-bg-primary) !important;
+  border: 1px solid var(--kk-border) !important;
+}
+
+/* Category headers in emoji picker */
+.categoryItemDefaultCategorySelected__8245a,
+.categoryItemDefaultCategorySelected__8245a:hover {
+  background: var(--klowns-accent) !important;
+}
+
+/* Pinned messages */
+.messageGroupWrapper_f8c6e9 {
+  background: var(--kk-bg-secondary) !important;
+  border: 1px solid var(--kk-border) !important;
+}
+
+/* Audio controls */
+.mediaBarProgress_a3b7f1,
+.mediaBarGrabber_c64f58 {
+  background: var(--klowns-accent) !important;
+}
+
+/* Server boost icon */
+.premiumIcon__5d55d {
+  color: var(--klowns-pink) !important;
+}
+
+/* Staged message indicator */
+.stagedIndicator__2cb25 {
+  background: var(--klowns-yellow) !important;
+  color: var(--klowns-bg) !important;
+}
+
+/* Live indicator */
+.liveLarge_c2f3ef {
+  background: var(--klowns-red) !important;
+}
+
+/* Streaming indicator */
+.iconLive__2d7d0 {
+  color: var(--klowns-purple) !important;
+}
+
+/* Font adjustments for headers */
+.header__104ca,
+.title__10613 {
+  font-family: var(--font-display) !important;
+  letter-spacing: 1px !important;
+}
+
+/* Selection color */
+::selection {
+  background: var(--klowns-accent) !important;
+  color: var(--klowns-bg) !important;
+}
+
+/* Scrollbar hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--klowns-accent) !important;
+}

@@ -1,0 +1,718 @@
+/* Killer Klowns Theme - GTK4/libadwaita CSS Variables */
+
+:root {
+  /* Core colors */
+  --klowns-bg: #120515;
+  --klowns-fg: #e0e0e0;
+  --klowns-accent: #39ff14;
+  --klowns-accent-light: #76ff7a;
+  --klowns-secondary: #1a0a1f;
+  --klowns-dark: #4b0082;
+  
+  /* Libadwaita color variables */
+  --accent-bg-color: #39ff14;
+  --accent-fg-color: #120515;
+  --accent-color: #39ff14;
+  
+  --window-bg-color: #120515;
+  --window-fg-color: #e0e0e0;
+  
+  --view-bg-color: #120515;
+  --view-fg-color: #e0e0e0;
+  
+  --sidebar-bg-color: #1a0a1f;
+  --sidebar-fg-color: #e0e0e0;
+  --sidebar-backdrop-color: #1a0a1f;
+  --sidebar-shade-color: #4b0082;
+  
+  --headerbar-bg-color: #1f0a24;
+  --headerbar-fg-color: #e0e0e0;
+  --headerbar-backdrop-color: #1a0a1f;
+  --headerbar-shade-color: #4b0082;
+  
+  --card-bg-color: #1a0a1f;
+  --card-fg-color: #e0e0e0;
+  
+  --popover-bg-color: #1a0a1f;
+  --popover-fg-color: #e0e0e0;
+  
+  --dialog-bg-color: #120515;
+  --dialog-fg-color: #e0e0e0;
+  
+  --borders: rgba(224, 224, 224, 0.2);
+}
+
+/* Override for backdrop windows */
+window:backdrop {
+  --window-bg-color: #1a0a1f;
+  --headerbar-bg-color: #1a0a1f;
+}
+
+/* GTK3 compatibility - define colors for legacy apps */
+@define-color accent_bg_color #39ff14;
+@define-color accent_fg_color #120515;
+@define-color accent_color #39ff14;
+
+@define-color window_bg_color #120515;
+@define-color window_fg_color #e0e0e0;
+
+@define-color view_bg_color #120515;
+@define-color view_fg_color #e0e0e0;
+@define-color sidebar_bg_color #1a0a1f;
+@define-color sidebar_fg_color #e0e0e0;
+@define-color sidebar_backdrop_color #1a0a1f;
+@define-color sidebar_shade_color #4b0082;
+
+@define-color headerbar_bg_color #1f0a24;
+@define-color headerbar_fg_color #e0e0e0;
+@define-color headerbar_backdrop_color #1a0a1f;
+@define-color headerbar_shade_color #4b0082;
+@define-color card_bg_color #1a0a1f;
+@define-color card_fg_color #e0e0e0;
+
+@define-color popover_bg_color #1a0a1f;
+@define-color popover_fg_color #e0e0e0;
+
+@define-color dialog_bg_color #120515;
+@define-color dialog_fg_color #e0e0e0;
+
+@define-color borders alpha(#e0e0e0, 0.2);
+
+/* GTK3 legacy */
+@define-color theme_fg_color #e0e0e0;
+@define-color theme_text_color #e0e0e0;
+@define-color theme_bg_color #120515;
+@define-color theme_base_color #120515;
+@define-color theme_selected_bg_color #39ff14;
+@define-color theme_selected_fg_color #120515;
+@define-color insensitive_bg_color #120515;
+@define-color insensitive_fg_color #4b0082;
+@define-color insensitive_base_color #120515;
+@define-color theme_unfocused_fg_color #e0e0e0;
+@define-color theme_unfocused_text_color #e0e0e0;
+@define-color theme_unfocused_bg_color #120515;
+@define-color theme_unfocused_base_color #120515;
+@define-color theme_unfocused_selected_bg_color #39ff14;
+@define-color theme_unfocused_selected_fg_color #120515;
+@define-color unfocused_insensitive_color #4b0082;
+@define-color unfocused_borders alpha(#e0e0e0, 0.2);
+@define-color warning_color #ffff00;
+@define-color error_color #dc143c;
+@define-color success_color #39ff14;
+@define-color destructive_color #dc143c;
+@define-color content_view_bg #120515;
+@define-color text_view_bg #120515;
+
+/* =============================================
+   NAUTILUS/GTK4 LIBADWAITA SPECIFIC STYLING
+   ============================================= */
+
+/* Main window styling for libadwaita apps */
+window {
+  background: #120515;
+  color: #e0e0e0;
+}
+
+window:backdrop {
+  background: #1a0a1f;
+}
+
+/* Headerbar and top bar */
+headerbar,
+.titlebar {
+  background: #1a0a1f;
+  color: #e0e0e0;
+  border-bottom: 1px solid rgba(224, 224, 224, 0.2);
+}
+
+headerbar:backdrop,
+.titlebar:backdrop {
+  background: #1a0a1f;
+  color: rgba(224, 224, 224, 0.7);
+}
+
+/* Sidebar styling - Nautilus left panel */
+.sidebar,
+.sidebar-pane,
+.navigation-sidebar {
+  background: #1a0a1f;
+  color: #e0e0e0;
+  border-right: 1px solid rgba(224, 224, 224, 0.1);
+}
+
+.sidebar:backdrop,
+.sidebar-pane:backdrop,
+.navigation-sidebar:backdrop {
+  background: #1a0a1f;
+}
+
+/* Sidebar rows/items */
+.sidebar row,
+.navigation-sidebar row {
+  color: #e0e0e0;
+  background: transparent;
+  border-radius: 6px;
+  margin: 2px 6px;
+}
+
+.sidebar row:hover,
+.navigation-sidebar row:hover {
+  background: rgba(57, 255, 20, 0.15);
+}
+
+.sidebar row:selected,
+.sidebar row:selected:hover,
+.navigation-sidebar row:selected {
+  background: rgba(57, 255, 20, 0.3);
+  color: #e0e0e0;
+  font-weight: 600;
+}
+
+.sidebar row:selected label,
+.navigation-sidebar row:selected label {
+  color: #e0e0e0;
+}
+
+/* Content/view areas */
+.content,
+.view,
+filechooser stack view,
+filechooser stack scrolledwindow {
+  background: #120515;
+  color: #e0e0e0;
+}
+
+/* Icon views and grids */
+iconview,
+gridview,
+contentview {
+  background: #120515;
+  color: #e0e0e0;
+}
+
+iconview:selected,
+gridview row:selected,
+contentview:selected {
+  background: rgba(57, 255, 20, 0.4);
+  color: #e0e0e0;
+}
+
+iconview:hover,
+gridview row:hover {
+  background: rgba(57, 255, 20, 0.15);
+}
+
+/* Tree/List views */
+treeview {
+  background: #120515;
+  color: #e0e0e0;
+}
+
+treeview:selected {
+  background: rgba(57, 255, 20, 0.4);
+  color: #e0e0e0;
+}
+
+treeview:hover {
+  background: rgba(57, 255, 20, 0.15);
+}
+
+treeview header button {
+  background: #1a0a1f;
+  color: #e0e0e0;
+  border: none;
+  border-bottom: 1px solid rgba(224, 224, 224, 0.2);
+}
+
+treeview header button:hover {
+  background: rgba(57, 255, 20, 0.2);
+}
+
+/* Buttons */
+button {
+  background: #1a0a1f;
+  color: #e0e0e0;
+  border: 1px solid rgba(224, 224, 224, 0.2);
+  border-radius: 6px;
+}
+
+button:hover {
+  background: rgba(57, 255, 20, 0.2);
+}
+
+button:checked,
+button:active {
+  background: #39ff14;
+  color: #120515;
+}
+
+button:disabled {
+  background: rgba(26, 10, 31, 0.5);
+  color: rgba(224, 224, 224, 0.4);
+}
+
+/* Suggested/Primary action buttons */
+button.suggested-action {
+  background: #39ff14;
+  color: #120515;
+}
+
+button.suggested-action:hover {
+  background: #50ff35;
+}
+
+/* Destructive buttons */
+button.destructive-action {
+  background: #dc143c;
+  color: #e0e0e0;
+}
+
+/* Flat buttons (toolbars) */
+button.flat {
+  background: transparent;
+  border: none;
+}
+
+button.flat:hover {
+  background: rgba(57, 255, 20, 0.2);
+}
+
+/* Linked buttons (path bar, etc) */
+.linked button {
+  border-radius: 0;
+}
+
+.linked button:first-child {
+  border-radius: 6px 0 0 6px;
+}
+
+.linked button:last-child {
+  border-radius: 0 6px 6px 0;
+}
+
+/* Entry/text input */
+entry {
+  background: #1a0a1f;
+  color: #e0e0e0;
+  border: 1px solid rgba(224, 224, 224, 0.2);
+  border-radius: 6px;
+}
+
+entry:focus {
+  border-color: #39ff14;
+  box-shadow: 0 0 0 1px rgba(57, 255, 20, 0.3);
+}
+
+entry:disabled {
+  background: rgba(26, 10, 31, 0.5);
+  color: rgba(224, 224, 224, 0.4);
+}
+
+entry selection {
+  background: #39ff14;
+  color: #120515;
+}
+
+/* Popovers and menus */
+popover,
+popover.menu,
+menu {
+  background: #1a0a1f;
+  color: #e0e0e0;
+  border: 1px solid rgba(224, 224, 224, 0.2);
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+popover modelbutton,
+menuitem,
+.menuitem {
+  color: #e0e0e0;
+  border-radius: 4px;
+  margin: 2px 4px;
+}
+
+popover modelbutton:hover,
+menuitem:hover {
+  background: rgba(57, 255, 20, 0.3);
+}
+
+/* Cards and containers */
+.card {
+  background: #1a0a1f;
+  color: #e0e0e0;
+  border-radius: 8px;
+  border: 1px solid rgba(224, 224, 224, 0.1);
+}
+
+.card:backdrop {
+  background: #1a0a1f;
+}
+
+/* Dialogs */
+dialog,
+.dialog,
+messagedialog,
+window.dialog {
+  background: #120515;
+  color: #e0e0e0;
+}
+
+dialog headerbar,
+.dialog headerbar {
+  background: #1a0a1f;
+  border-bottom: 1px solid rgba(224, 224, 224, 0.2);
+}
+
+/* Notebooks/Tabs */
+notebook {
+  background: #120515;
+  border: none;
+}
+
+notebook header {
+  background: #1a0a1f;
+  border-bottom: 1px solid rgba(224, 224, 224, 0.2);
+}
+
+notebook header tabs tab {
+  background: transparent;
+  color: rgba(224, 224, 224, 0.6);
+  border: none;
+  padding: 6px 12px;
+}
+
+notebook header tabs tab:hover {
+  background: rgba(57, 255, 20, 0.1);
+  color: #e0e0e0;
+}
+
+notebook header tabs tab:checked {
+  background: rgba(57, 255, 20, 0.3);
+  color: #e0e0e0;
+  box-shadow: inset 0 -2px 0 0 #39ff14;
+}
+
+/* Scrollbars */
+scrollbar {
+  background: transparent;
+}
+
+scrollbar slider {
+  background: rgba(224, 224, 224, 0.2);
+  border-radius: 6px;
+}
+
+scrollbar slider:hover {
+  background: rgba(57, 255, 20, 0.5);
+}
+
+scrollbar slider:active {
+  background: #39ff14;
+}
+
+/* Scrolled windows */
+scrolledwindow {
+  background: #120515;
+}
+
+scrolledwindow viewport {
+  background: #120515;
+}
+
+/* Toolbars */
+toolbar {
+  background: #1a0a1f;
+  border-bottom: 1px solid rgba(224, 224, 224, 0.2);
+}
+
+toolbar button {
+  background: transparent;
+  border: none;
+}
+
+/* Search bars */
+searchbar {
+  background: #1a0a1f;
+  border-bottom: 1px solid rgba(224, 224, 224, 0.2);
+}
+
+searchbar entry {
+  background: #120515;
+}
+
+/* Lists */
+list {
+  background: #120515;
+  color: #e0e0e0;
+}
+
+list row {
+  background: transparent;
+  color: #e0e0e0;
+  border-bottom: 1px solid rgba(224, 224, 224, 0.05);
+}
+
+list row:hover {
+  background: rgba(57, 255, 20, 0.1);
+}
+
+list row:selected,
+list row:selected:hover {
+  background: rgba(57, 255, 20, 0.3);
+  color: #e0e0e0;
+}
+
+/* Flowbox (icon views) */
+flowbox {
+  background: #120515;
+}
+
+flowbox child {
+  background: transparent;
+  border-radius: 6px;
+}
+
+flowbox child:hover {
+  background: rgba(57, 255, 20, 0.15);
+}
+
+flowbox child:selected {
+  background: rgba(57, 255, 20, 0.4);
+}
+
+/* Status pages (empty states) */
+statuspage {
+  color: #e0e0e0;
+}
+
+statuspage .dim-label {
+  color: rgba(224, 224, 224, 0.5);
+}
+
+/* Adwaita specific widgets */
+.adw-sidebar {
+  background: #1a0a1f;
+}
+
+.adw-toolbar-view content {
+  background: #120515;
+}
+
+.adw-header-bar {
+  background: #1a0a1f;
+}
+
+/* Toast notifications */
+toast {
+  background: #1a0a1f;
+  color: #e0e0e0;
+  border: 1px solid rgba(224, 224, 224, 0.2);
+  border-radius: 8px;
+}
+
+/* Nautilus-specific selectors */
+window.nautilus-window,
+window.nautilus-window:backdrop {
+  background: #120515;
+}
+
+window.nautilus-window headerbar {
+  background: #1a0a1f;
+}
+
+window.nautilus-window flap .sidebar-pane {
+  background: #1a0a1f;
+}
+
+window.nautilus-window flap .content-pane {
+  background: #120515;
+}
+
+/* Split views */
+splitview sidebar,
+overlay-split-view sidebar {
+  background: #1a0a1f;
+}
+
+/* Preferences window */
+window.preferences windowhandle headerbar {
+  background: #1a0a1f;
+}
+
+preferencespage {
+  background: #120515;
+  color: #e0e0e0;
+}
+
+preferencesgroup {
+  background: #1a0a1f;
+  border-radius: 8px;
+  border: 1px solid rgba(224, 224, 224, 0.1);
+}
+
+/* Combo boxes and dropdowns */
+combobox button {
+  background: #1a0a1f;
+}
+
+dropdown button {
+  background: #1a0a1f;
+}
+
+dropdown popup {
+  background: #1a0a1f;
+}
+
+/* Switches */
+switch {
+  background: #4b0082;
+  border-radius: 12px;
+}
+
+switch:checked {
+  background: #39ff14;
+}
+
+switch slider {
+  background: #e0e0e0;
+}
+
+/* Checkboxes and radio buttons */
+checkbutton check,
+radiobutton radio {
+  background: #1a0a1f;
+  border: 1px solid rgba(224, 224, 224, 0.3);
+}
+
+checkbutton check:checked,
+radiobutton radio:checked {
+  background: #39ff14;
+  border-color: #39ff14;
+}
+
+/* Spin buttons */
+spinbutton {
+  background: #1a0a1f;
+}
+
+spinbutton button {
+  background: transparent;
+}
+
+/* Progress bars */
+progressbar trough {
+  background: #1a0a1f;
+  border-radius: 4px;
+}
+
+progressbar progress {
+  background: #39ff14;
+  border-radius: 4px;
+}
+
+levelbar trough {
+  background: #1a0a1f;
+}
+
+levelbar block.filled {
+  background: #39ff14;
+}
+
+/* Scale/sliders */
+scale trough {
+  background: #1a0a1f;
+  border-radius: 4px;
+}
+
+scale highlight {
+  background: #39ff14;
+  border-radius: 4px;
+}
+
+scale slider {
+  background: #e0e0e0;
+  border: 2px solid #39ff14;
+}
+
+/* Info bars */
+infobar {
+  background: #1a0a1f;
+  border-radius: 6px;
+}
+
+infobar.info {
+  background: rgba(0, 255, 255, 0.2);
+}
+
+infobar.warning {
+  background: rgba(255, 255, 0, 0.2);
+}
+
+infobar.error {
+  background: rgba(220, 20, 60, 0.2);
+}
+
+/* Expander rows */
+expanderrow {
+  background: transparent;
+}
+
+expanderrow:hover {
+  background: rgba(57, 255, 20, 0.1);
+}
+
+/* Action rows */
+actionrow {
+  background: transparent;
+}
+
+actionrow:hover {
+  background: rgba(57, 255, 20, 0.1);
+}
+
+/* Window controls (close, minimize, maximize) */
+windowcontrols button {
+  background: transparent;
+  border: none;
+  padding: 4px;
+}
+
+windowcontrols button:hover image {
+  background: rgba(224, 224, 224, 0.2);
+  border-radius: 50%;
+}
+
+/* Link buttons */
+button.link,
+.link {
+  color: #00ffff;
+}
+
+button.link:hover,
+.link:hover {
+  color: #7fffd4;
+}
+
+/* Selection styling */
+selection {
+  background: #39ff14;
+  color: #120515;
+}
+
+/* Text selection in views */
+textview text selection,
+entry selection {
+  background: #39ff14;
+  color: #120515;
+}
+
+/* Focus styling */
+:focus {
+  outline-color: rgba(57, 255, 20, 0.5);
+}
+
+:focus-visible {
+  outline: 2px solid rgba(57, 255, 20, 0.5);
+  outline-offset: -2px;
+}

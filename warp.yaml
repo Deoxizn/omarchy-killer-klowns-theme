@@ -1,0 +1,26 @@
+name: Killer Klowns
+accent: "#39ff14"
+cursor: "#39ff14"
+background: "#120515"
+foreground: "#e0e0e0"
+details: darker
+
+terminal_colors:
+  normal:
+    black:   "#1a0a1f"
+    red:     "#dc143c"
+    green:   "#39ff14"
+    yellow:  "#ffff00"
+    blue:    "#ff1493"
+    magenta: "#bf00ff"
+    cyan:    "#00ffff"
+    white:   "#e0e0e0"
+  bright:
+    black:   "#4b0082"
+    red:     "#ff3366"
+    green:   "#76ff7a"
+    yellow:  "#ffff99"
+    blue:    "#ff69b4"
+    magenta: "#da70d6"
+    cyan:    "#7fffd4"
+    white:   "#ffffff"

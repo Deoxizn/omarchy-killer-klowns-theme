@@ -1,0 +1,312 @@
+/* Killer Klowns Theme - GTK3 Colors */
+
+@define-color klowns_bg #120515;
+@define-color klowns_fg #e0e0e0;
+@define-color klowns_accent #39ff14;
+@define-color klowns_accent_light #76ff7a;
+@define-color klowns_secondary #1a0a1f;
+@define-color klowns_dark #4b0082;
+
+/* =============================================
+   GTK3 THEME COLOR VARIABLES
+   ============================================= */
+
+@define-color theme_fg_color @klowns_fg;
+@define-color theme_text_color @klowns_fg;
+@define-color theme_bg_color @klowns_bg;
+@define-color theme_base_color @klowns_bg;
+@define-color theme_selected_bg_color @klowns_accent;
+@define-color theme_selected_fg_color @klowns_bg;
+@define-color insensitive_bg_color @klowns_bg;
+@define-color insensitive_fg_color @klowns_dark;
+@define-color insensitive_base_color @klowns_bg;
+@define-color theme_unfocused_fg_color @klowns_fg;
+@define-color theme_unfocused_text_color @klowns_fg;
+@define-color theme_unfocused_bg_color @klowns_bg;
+@define-color theme_unfocused_base_color @klowns_bg;
+@define-color theme_unfocused_selected_bg_color @klowns_accent;
+@define-color theme_unfocused_selected_fg_color @klowns_bg;
+@define-color unfocused_insensitive_color @klowns_dark;
+@define-color unfocused_borders alpha(@klowns_fg, 0.2);
+@define-color warning_color #ffff00;
+@define-color error_color #dc143c;
+@define-color success_color #39ff14;
+@define-color destructive_color #dc143c;
+
+@define-color content_view_bg @klowns_bg;
+@define-color text_view_bg @klowns_bg;
+
+@define-color borders alpha(@klowns_fg, 0.2);
+
+/* =============================================
+   ACCENT COLORS FOR GTK3
+   ============================================= */
+
+@define-color accent_bg_color @klowns_accent;
+@define-color accent_fg_color @klowns_bg;
+@define-color accent_color @klowns_accent;
+
+/* =============================================
+   WINDOW AND DIALOG COLORS
+   ============================================= */
+
+@define-color window_bg_color @klowns_bg;
+@define-color window_fg_color @klowns_fg;
+
+@define-color view_bg_color @klowns_bg;
+@define-color view_fg_color @klowns_fg;
+@define-color sidebar_bg_color @klowns_secondary;
+@define-color sidebar_fg_color @klowns_fg;
+
+@define-color headerbar_bg_color @klowns_accent_light;
+@define-color headerbar_fg_color @klowns_bg;
+@define-color headerbar_backdrop_color @klowns_secondary;
+@define-color card_bg_color @klowns_secondary;
+@define-color card_fg_color @klowns_fg;
+
+@define-color popover_bg_color @klowns_secondary;
+@define-color popover_fg_color @klowns_fg;
+
+@define-color dialog_bg_color @klowns_bg;
+@define-color dialog_fg_color @klowns_fg;
+
+/* =============================================
+   NAUTILUS SPECIFIC STYLING
+   ============================================= */
+
+/* Nautilus window background */
+nautilus-window,
+nautilus-window notebook,
+nautilus-window notebook > stack {
+    background: @klowns_bg;
+}
+
+/* Nautilus sidebar */
+nautilus-window sidebar,
+nautilus-window .sidebar,
+nautilus-window placessidebar {
+    background: @klowns_secondary;
+    border-right: 1px solid alpha(@klowns_fg, 0.1);
+}
+
+nautilus-window placessidebar row {
+    color: @klowns_fg;
+    background: transparent;
+}
+
+nautilus-window placessidebar row:selected,
+nautilus-window placessidebar row:selected label {
+    background: alpha(@klowns_accent, 0.3);
+    color: @klowns_fg;
+    font-weight: bold;
+}
+
+nautilus-window placessidebar row:hover {
+    background: alpha(@klowns_accent, 0.15);
+}
+
+/* Nautilus path bar */
+nautilus-window .path-bar-box {
+    background: @klowns_secondary;
+    border-radius: 4px;
+}
+
+nautilus-window .path-bar-box button {
+    background: transparent;
+    color: @klowns_fg;
+    border: none;
+}
+
+nautilus-window .path-bar-box button:hover {
+    background: alpha(@klowns_accent, 0.2);
+}
+
+nautilus-window .path-bar-box button:checked {
+    background: alpha(@klowns_accent, 0.3);
+    color: @klowns_accent;
+}
+
+/* Nautilus file list (icon view and list view) */
+nautilus-window iconview,
+nautilus-window treeview {
+    background: @klowns_bg;
+    color: @klowns_fg;
+}
+
+nautilus-window iconview:selected,
+nautilus-window treeview:selected {
+    background: alpha(@klowns_accent, 0.4);
+    color: @klowns_fg;
+}
+
+nautilus-window iconview:hover,
+nautilus-window treeview:hover {
+    background: alpha(@klowns_accent, 0.15);
+}
+
+/* Nautilus columns in list view */
+nautilus-window treeview header button {
+    background: @klowns_secondary;
+    color: @klowns_fg;
+    border: none;
+    border-bottom: 1px solid alpha(@klowns_fg, 0.2);
+}
+
+nautilus-window treeview header button:hover {
+    background: alpha(@klowns_accent, 0.2);
+}
+
+/* Nautilus floating bar (path/info bar at bottom) */
+nautilus-window .floating-bar {
+    background: alpha(@klowns_secondary, 0.95);
+    color: @klowns_fg;
+    border-radius: 4px;
+    border: 1px solid alpha(@klowns_accent, 0.3);
+}
+
+/* Nautilus view selector (icon/list view toggle) */
+nautilus-window .view-switcher button {
+    background: @klowns_secondary;
+    color: @klowns_fg;
+    border: 1px solid alpha(@klowns_fg, 0.2);
+}
+
+nautilus-window .view-switcher button:hover {
+    background: alpha(@klowns_accent, 0.2);
+}
+
+nautilus-window .view-switcher button:checked {
+    background: @klowns_accent;
+    color: @klowns_bg;
+}
+
+/* Nautilus search entry */
+nautilus-window entry.search {
+    background: @klowns_secondary;
+    color: @klowns_fg;
+    border: 1px solid alpha(@klowns_fg, 0.2);
+    border-radius: 4px;
+}
+
+nautilus-window entry.search:focus {
+    border-color: @klowns_accent;
+}
+
+/* Nautilus button styling */
+nautilus-window button {
+    background: @klowns_secondary;
+    color: @klowns_fg;
+    border: 1px solid alpha(@klowns_fg, 0.2);
+}
+
+nautilus-window button:hover {
+    background: alpha(@klowns_accent, 0.2);
+}
+
+nautilus-window button:active,
+nautilus-window button:checked {
+    background: @klowns_accent;
+    color: @klowns_bg;
+}
+
+/* Nautilus popover menus */
+nautilus-window popover,
+nautilus-window popover.menu {
+    background: @klowns_secondary;
+    border: 1px solid alpha(@klowns_fg, 0.2);
+}
+
+nautilus-window popover modelbutton {
+    color: @klowns_fg;
+}
+
+nautilus-window popover modelbutton:hover {
+    background: alpha(@klowns_accent, 0.3);
+}
+
+/* Nautilus headerbar */
+nautilus-window headerbar {
+    background: @klowns_secondary;
+    color: @klowns_fg;
+    border-bottom: 1px solid alpha(@klowns_fg, 0.2);
+}
+
+/* Nautilus dialogs (properties, etc) */
+nautilus-window dialog,
+nautilus-window dialog .dialog-vbox {
+    background: @klowns_bg;
+}
+
+nautilus-window dialog headerbar {
+    background: @klowns_secondary;
+    color: @klowns_fg;
+}
+
+/* Nautilus location entry */
+nautilus-window .nautilus-location-entry {
+    background: @klowns_secondary;
+    color: @klowns_fg;
+}
+
+/* Nautilus notebook tabs */
+nautilus-window notebook > header {
+    background: @klowns_secondary;
+    border-bottom: 1px solid alpha(@klowns_fg, 0.2);
+}
+
+nautilus-window notebook > header tab {
+    background: transparent;
+    color: @klowns_fg;
+    border: none;
+}
+
+nautilus-window notebook > header tab:checked {
+    background: alpha(@klowns_accent, 0.3);
+    border-bottom: 2px solid @klowns_accent;
+}
+
+/* Nautilus status bar */
+nautilus-window .statusbar {
+    background: @klowns_secondary;
+    color: @klowns_fg;
+}
+
+/* Nautilus toolbar */
+nautilus-window toolbar {
+    background: @klowns_secondary;
+    border-bottom: 1px solid alpha(@klowns_fg, 0.2);
+}
+
+nautilus-window toolbar button {
+    background: transparent;
+    border: none;
+}
+
+nautilus-window toolbar button:hover {
+    background: alpha(@klowns_accent, 0.2);
+}
+
+/* Fix for scrolled windows in Nautilus */
+nautilus-window scrolledwindow {
+    background: @klowns_bg;
+}
+
+nautilus-window viewport {
+    background: @klowns_bg;
+}
+
+/* Nautilus column chooser popup */
+nautilus-window .view-options-popup {
+    background: @klowns_secondary;
+}
+
+/* Nautilus preferences dialog */
+window.nautilus-properties-window,
+window.nautilus-preferences-window {
+    background: @klowns_bg;
+}
+
+window.nautilus-properties-window headerbar,
+window.nautilus-preferences-window headerbar {
+    background: @klowns_secondary;
+}

@@ -1,0 +1,12 @@
+[Desktop Entry]
+Type=X-GNOME-Metatheme
+Name=killer-klowns
+Comment=Killer Klowns from Outer Space Theme
+Encoding=UTF-8
+
+[X-GNOME-Metatheme]
+GtkTheme=killer-klowns
+MetacityTheme=killer-klowns
+IconTheme=Yaru-purple
+CursorTheme=Yaru-purple
+CursorSize=24

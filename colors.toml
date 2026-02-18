@@ -1,0 +1,34 @@
+# Accent and UI colors - Killer Klowns from Outer Space Theme
+accent = "#39ff14"
+active_border_color = "#ff1493"
+active_tab_background = "#1a0a1f"
+
+# Cursor colors
+cursor = "#39ff14"
+
+# Primary colors - Dark space/circus tent with bright neon text
+foreground = "#e0e0e0"
+background = "#120515"
+
+selection_foreground = "#120515"
+selection_background = "#ff1493"
+
+# Normal colors (ANSI 0-7) - Dark circus palette
+color0 = "#1a0a1f"
+color1 = "#dc143c"
+color2 = "#39ff14"
+color3 = "#ffff00"
+color4 = "#ff1493"
+color5 = "#bf00ff"
+color6 = "#00ffff"
+color7 = "#e0e0e0"
+
+# Bright colors (ANSI 8-15)
+color8 = "#4b0082"
+color9 = "#ff3366"
+color10 = "#76ff7a"
+color11 = "#ffff99"
+color12 = "#ff69b4"
+color13 = "#da70d6"
+color14 = "#7fffd4"
+color15 = "#ffffff"
