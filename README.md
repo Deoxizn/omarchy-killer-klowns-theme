@@ -29,7 +29,8 @@ To install this theme, simply use the omarchy-theme-install command:
 &nbsp;  
 &nbsp;    
 &nbsp;      
-# Vesktop-Theme  
+# Vesktop-Theme
+![image](vesktop.png) 
 &nbsp;  
 For Vesktop users, you can install this theme by copying the theme file to your Vesktop themes directory:  
 &nbsp;  
